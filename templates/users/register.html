@@ -1,0 +1,23 @@
+{% extends 'Thoth_Gaming/base.html' %}
+{% load bootstrap4 %}
+{% block page %}
+    <div class="row">
+    <div class="col"></div>
+    <div class ="col ml-lg-4 mt-lg-3">
+        <div class="register ml-lg-5" style="font-family: sans-serif">
+            <div class="display-4 text-center">
+                <p>ثبت نام</p>
+            </div>
+            <form class="form-group pt-sm-3 pl-sm-1 pr-sm-1" method="post" action="{% url 'Thoth_Gaming.urls:users.urls:register' %}">
+            {% bootstrap_form user_form %}
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{% url 'Thoth_Gaming.urls:homepage' %}"/>
+            <div class="text-center mt-lg-5">
+                <button class="btn btn-success" type="submit">Register</button>
+            </div>
+            </form>
+        </div>
+    </div>
+    <div class="col"></div>
+    </div>
+{% endblock page %}

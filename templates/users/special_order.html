@@ -1,0 +1,11 @@
+{% extends 'Thoth_Gaming/base.html' %}
+{% load bootstrap4 %}
+{% block page %}
+    <div class="container">
+        <form method="post" class="form">
+            {% bootstrap_form buy_form %}
+            {% csrf_token %}
+            <button name="sumbit" class="btn btn-success">Send</button>
+        </form>
+    </div>
+{% endblock page %}

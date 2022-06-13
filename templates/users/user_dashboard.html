@@ -1,0 +1,56 @@
+{% extends 'Thoth_Gaming/base.html' %}
+{% block page %}
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header text-center">
+                <h3>Welcome to Dashboard: {{ user_dashboard.name }}</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+                  <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                  <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">پرمیوم</a>
+                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">دعوت دوستان</a>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="tab-content" id="v-pills-tabContent">
+                  <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"> </div>
+                  <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                      <form method="post" class="form" action="{% url 'Thoth_Gaming.urls:users.urls:user_dashboard' request.user.userdashboard.id %}">
+                          {% csrf_token %}
+                          <fieldset disabled>
+                          <label class="label mt-sm-2">Username:</label>
+                          <input class="form-control" value="{{ user_dashboard.name }}">
+                          </fieldset>
+                          <label class="label mt-sm-2">First Name:</label>
+                          <input name="first_name" class="form-control" value="{{ user_dashboard.user.first_name }}">
+                          <label class="label mt-sm-2">Last Name:</label>
+                          <input name="last_name" class="form-control" value="{{ user_dashboard.user.last_name }}">
+                          <label class="label mt-sm-2">Email:</label>
+                          <input name="email" class="form-control" value="{{ user_dashboard.user.email }}">
+                          <label class="label mt-sm-2">Trade Link:</label>
+                          <input name="trade_link" class="form-control" value="{{ user_dashboard.trading_link }}">
+                          <button class="btn btn-primary mt-sm-3" name="submit">Change</button>
+                      </form>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+                  <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                      <div class="card-header h3">
+                          لینک را به دوستان خود بدهید تا از طریق شما عضو شوند، همچنین با دعوت هر 5 دوست خود به شما 5 درصد تخفیف داده می شود. این تخفیف در صحفه خرید خود به صورت خودکار اعمال می شود
+                      </div>
+                      <fieldset disabled>
+                      <label class="label mt-sm-2">Invite Link:</label>
+                      <input class="form-control" value="users/{{ user_dashboard.invite_link }}">
+                      <label class="label mt-sm-2">Invited Friends:</label>
+                      <input class="form-control" type="number" value="{{ user_dashboard.get_invite_friends }}">
+                      </fieldset>
+                  </div>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock page %}
