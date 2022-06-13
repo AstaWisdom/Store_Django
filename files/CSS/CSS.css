@@ -1,0 +1,19 @@
+.slider{
+    height: 730px;
+}
+
+.nav a:hover{
+    color: black;
+}
+
+.cart-sum{
+    border: 5px;
+    padding-left: 0;
+    width: inherit;
+    height: 300px;
+}
+
+.cart-sum-header{
+    float: left;
+    text-align: left;
+}
