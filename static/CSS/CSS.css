@@ -1,0 +1,62 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+{% load static %}
+.contain{
+
+    border-style: outset;
+    background-color: whitesmoke;
+}
+.register{
+
+    border-style: outset;
+    background-color: whitesmoke;
+}
+
+
+.main-contain{
+  min-height: 900px;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-contain_1{
+  min-height: 500px;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.hp_div_1 {
+    color: #777;
+    background-color: white;
+    padding: 50px 80px;
+}
+.store_div_1 {
+    color: whitesmoke;
+    padding: 50px 80px;
+}
+.main_container{
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.text_hp_1{
+    background-color: transparent;
+    color: whitesmoke;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.caption{
+    position: absolute;
+    left: 0;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
