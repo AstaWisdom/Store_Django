@@ -24,16 +24,37 @@ This project shows:
 - Category browsing
 - Shopping cart (guest supported)
 - Cart total + discount calculation
-- Minimal checkout (without login)
+- Shipping & address handling
+- Responsive UI design
+- Minimal checkout (no payment gateway yet)
 - Django admin for product/order management
 
-### 📰 Blog
+### 🔐 User Authentication
+- User register/login
+- Extendable profile model
+- Authentication forms
+- Login required for certain actions
+- User dashboard (orders, profile info, invites, reward points)
+
+### 🧑‍🤝‍🧑 Invite / Referral & Rewards
+- Register using invite code
+- Validate/referral logic during registration
+- Earn reward points through invited users
+- Can extend to more complex referral systems
+
+### 🔎 Search & Pagination
+- Search functionality for store/blog content
+- Pagination for product lists and blog posts
+
+### 📰 Blog (CKEditor)
 - Article creation and editing
-- Rich-text fields using CKEditor
-- Article listing view
-- Single article page
+- Rich-text editor (CKEditor)
+- Tags and categories for blog posts
+- Comments system
 - Image upload supported (if configured)
 - SEO-friendly fields (title, slug, content)
+- Blog list view + single article page
+
 
 ---
 
@@ -103,25 +124,13 @@ You can manage:
 
     Basic e-commerce business logic
 
-🧪 Future Improvements
-
-    User authentication / login checkout
-
-    Payments and gateways
-
-    Shipping & addresses
-
-    Blog tags & comments
-
-    Pagination & search
-
-    Docker deployment
-
-    PostgreSQL configuration
-
-    Responsive UI redesign
-
-    Tests (unit + integration)
+## 🧪 Future Improvements
+- Payment gateway integration
+- Better shipping methods & tracking
+- Docker deployment
+- PostgreSQL for production
+- Additional security hardening
+- Automated tests (unit & integration)
 
 ⚠️ Note
 
