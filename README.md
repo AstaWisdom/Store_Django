@@ -124,13 +124,13 @@ You can manage:
 
     Basic e-commerce business logic
 
-## 🧪 Future Improvements
-- Payment gateway integration
-- Better shipping methods & tracking
-- Docker deployment
-- PostgreSQL for production
-- Additional security hardening
-- Automated tests (unit & integration)
+ 🧪 Future Improvements
+    - Payment gateway integration
+    - Better shipping methods & tracking
+    - Docker deployment
+    - PostgreSQL for production
+    - Additional security hardening
+    - Automated tests (unit & integration)
 
 ⚠️ Note
 
