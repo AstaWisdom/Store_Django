@@ -1,60 +1,61 @@
-# Store_Django — E-Commerce + Blog System (Django)
+# Store_Django — E-Commerce + Blog + User Auth + Referral & Rewards (Django)
 
-A basic e-commerce web application built with Django featuring product catalog, guest shopping cart, discount codes, and an integrated blog system with CKEditor for rich text content.
+A full Django e-commerce application featuring product catalog, guest shopping cart, discount logic, user authentication, referral codes with reward points, blog system with CKEditor, comments, tags, shipping & addresses, search, pagination, and responsive UI.
 
 ---
 
 ## 🛒 Overview
 
-This project shows:
-- E-commerce product catalog
-- Guest shopping cart
-- Promo code (discount) logic
-- Blog / article system
-- Admin CRUD
-- CKEditor rich-text editor for blog posts
-- Fully working store flows using Django templates and ORM
+This project demonstrates:
+- Real e-commerce flows with Django
+- Guest shopping cart and checkout logic
+- User authentication and extended profile data
+- Invite / referral system + reward points
+- Blog system (CKEditor, tags, comments)
+- Responsive UI design
+- Search & pagination
+- Shipping & addresses
+- Django ORM and admin integrations
 
 ---
 
 ## ✨ Features
 
 ### 🛍 Store
-- Product list and detail pages
+- Product list & detail pages
 - Category browsing
-- Shopping cart (guest supported)
-- Cart total + discount calculation
+- Add to cart (guest supported)
+- Discount / promo code
 - Shipping & address handling
 - Responsive UI design
-- Minimal checkout (no payment gateway yet)
-- Django admin for product/order management
+- Checkout flow (without payment gateway yet)
+- Admin management for products, orders and categories
 
 ### 🔐 User Authentication
-- User register/login
-- Extendable profile model
+- Register / login
+- Extended user info
 - Authentication forms
-- Login required for certain actions
-- User dashboard (orders, profile info, invites, reward points)
+- Login required for specific actions
+- User dashboard (profile, orders, invites, reward points)
 
-### 🧑‍🤝‍🧑 Invite / Referral & Rewards
+### 🧑‍🤝‍🧑 Invite & Referral Rewards
 - Register using invite code
-- Validate/referral logic during registration
-- Earn reward points through invited users
-- Can extend to more complex referral systems
+- Validate referral code on registration
+- Earn reward points for referred users
+- Extendable to more complex reward systems
 
 ### 🔎 Search & Pagination
-- Search functionality for store/blog content
-- Pagination for product lists and blog posts
+- Product search
+- Blog search
+- Pagination for product lists & blog lists
 
 ### 📰 Blog (CKEditor)
-- Article creation and editing
+- Create / edit articles
 - Rich-text editor (CKEditor)
-- Tags and categories for blog posts
+- Blog tags and categories
 - Comments system
-- Image upload supported (if configured)
-- SEO-friendly fields (title, slug, content)
-- Blog list view + single article page
-
+- Image upload (if configured)
+- SEO fields (title, slug, content)
 
 ---
 
@@ -62,11 +63,10 @@ This project shows:
 
 - Python 3.x
 - Django
-- SQLite (dev)
-- Django CKEditor
-- HTML/CSS Templates
+- SQLite (development)
+- CKEditor
+- HTML / CSS (responsive)
 - Vanilla JS
-- Django Admin
 
 ---
 
@@ -77,10 +77,9 @@ git clone https://github.com/AstaWisdom/Store_Django.git
 cd Store_Django
 
 python -m venv .venv
-source .venv/bin/activate
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
 
-pip install -r requirements.txt   # or install Django + CKEditor manually
-
+pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 
@@ -90,54 +89,66 @@ http://127.0.0.1:8000/
 
 📦 Admin Panel
 
-Default Django admin available at:
-
 /admin
 
-You can manage:
+Manage:
 
     Products
 
     Categories
 
-    Blog Posts
-
-    Discounts (if available)
-
     Orders
 
-🛠 What You Learn From This Project
+    Blog posts
 
-    Django ORM
+    Tags
 
-    Model relationships (product/category + blog)
+    Comments
 
-    Template rendering
+    Users
 
-    Context + view logic
+    Invite codes
 
-    CKEditor integration
+🧠 What You Learn From This Project
+
+    Django ORM & models
+
+    Template rendering and context data
+
+    User authentication flows
+
+    Referral & reward logic
+
+    Blog CMS integration
 
     Handling media uploads
 
-    Guest checkout implementation
+    Search & pagination
 
-    Basic e-commerce business logic
+    Responsive UI development
 
- 🧪 Future Improvements
-    - Payment gateway integration
-    - Better shipping methods & tracking
-    - Docker deployment
-    - PostgreSQL for production
-    - Additional security hardening
-    - Automated tests (unit & integration)
+    Basic e-commerce architecture
+
+🧪 Future Improvements
+
+    Payment gateway integration
+
+    Better shipping methods & tracking
+
+    Docker deployment
+
+    PostgreSQL for production
+
+    Additional security hardening
+
+    Automated tests (unit & integration)
 
 ⚠️ Note
 
-This is a demo and not a production-ready e-commerce system. Some security and payments are intentionally simplified for learning purposes.
+This is a demo / portfolio project and not fully production hardened. Payments and certain security features are intentionally simplified.
 📌 Author
 
-Portfolio project created to learn practical Django development and combine e-commerce with blog / CMS functionality using CKEditor.
+Portfolio project created to practice Django development by combining e-commerce, authentication, referral logic, search, pagination, responsive UI and blog CMS functionality.
 
 
 ---
